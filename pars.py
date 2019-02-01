@@ -1,5 +1,6 @@
 def min_count_of_symbol(number_of_symbols, file_name):
     symbols = []
+    rdy_list = []
     with open(file_name, "r") as file:
         # for line in file:
         symbols.append(file.read())
@@ -18,6 +19,8 @@ def min_count_of_symbol(number_of_symbols, file_name):
                 largest_k = key
                 largest = value
         del dict_of_symbols[largest_k]
-    return dict_of_symbols
+    for key in dict_of_symbols: 
+        rdy_list.append(key)
+    return rdy_list
 
 print(min_count_of_symbol(8, 'symbols.txt'))
