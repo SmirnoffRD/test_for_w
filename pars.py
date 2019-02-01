@@ -6,9 +6,10 @@ def min_count_of_symbol(number_of_symbols, file_name):
     dict_of_symbols = {}
     list_of_symbols = list(symbols[0])
     set_of_simbols = set(list_of_symbols)
-    ready_list =[]
+
     for symbol in set_of_simbols:
         dict_of_symbols.update({symbol: symbols[0].count(symbol)})
+
     while len(dict_of_symbols) > number_of_symbols:
         largest_k = ''
         largest = 0
